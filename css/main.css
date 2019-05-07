@@ -1,0 +1,148 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1440px){
+
+}
+@media only screen and (max-width: 320px) {
+
+}
+
+/* header not working still */
+/* header {
+    display: flex;
+    background-image: url("https://i.imgur.com/ORL23sJ.jpg") no-repeat;
+    margin: 0;
+    padding: 30px 20px 30px 20px;
+}  */
+
+body {
+height: 100vh;    
+display: flex;
+flex-direction: column;
+margin: auto;
+font-family: 'Uncial Antiqua', cursive;
+color: plum;
+text-align: center;
+background-color: lavender;
+}
+
+
+nav {
+display: none;   
+flex-direction: row; 
+justify-content: space-around;
+align-items: center;
+height: 50px;
+background-color: purple;
+} 
+
+nav div {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+}
+
+
+h1 {
+font-family: 'Uncial Antiqua', cursive;
+font-size: 52px;
+background-color: indigo;
+margin-top: 0px;
+padding: 50px;
+} 
+
+h3 {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+font-style: italic;
+margin: auto;
+}
+
+.deck {
+    display: flex;
+    width: 222px;
+    height: 300px;
+    margin: auto; 
+    align-items: center;
+    justify-content: center;
+    background-color: teal;
+    border: 20px solid purple;
+    border-radius: 10px;
+    } 
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    div {
+        display: flex;
+        }
+
+    .card {
+        display: flex;
+        position: relative;
+        margin: auto;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        transform-style: preserve-3d;
+        transition: all 0.9s ease;
+        transform: translate(-50%, -50%);
+    }
+
+    .card:hover {
+        transform: rotateY(180deg);
+    }
+
+    .front { 
+        display: flex;
+        position: relative;
+        width: 222px;
+        height: 300px;
+        margin: auto;
+        background-color: teal;
+        border: 20px solid purple;
+        border-radius: 10px;
+        backface-visibility: hidden;
+        overflow: hidden;
+        background-color: teal;
+    } 
+
+     .back {
+        display: flex;
+        position: relative;
+        width: 222px;
+        height: 300px;
+        margin: auto;
+        border: 20px solid purple;
+        border-radius: 10px;
+        backface-visibility: hidden;
+        overflow: hidden;
+        background-image: url("https://i.imgur.com/ZDPuCdU.jpg"); 
+        background-position: center;  
+        background-size: cover;     
+    } 
+
+button {
+    display: hidden;
+    width: 100px;
+    height: 50px;
+    margin: auto;
+    align-items: center;
+    background-color: plum;
+    border: 1 px solid transparent;
+    border-radius: 5px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+    font-size: 0;
+  }

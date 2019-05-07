@@ -56,4 +56,5 @@ function randomCardPicker() {
 
 [wireframe-link](https://wireframe.cc/pro/edit/245136) 
 
-this is somehting so the working tree becomes dirty
+link to game 
+file:///Users/jennymartin/Fundamentals/code/tarot-card-game/index.html
