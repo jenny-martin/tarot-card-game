@@ -20,8 +20,8 @@
 body {
 height: 100vh;    
 /* display: flex; */
-background-color: lavender;
-color: lavender;
+background-color: antiquewhite;
+color: #0B132D;
 text-align: center;
 }
 
@@ -32,7 +32,7 @@ flex-direction: row;
 justify-content: space-around;
 align-items: center;
 height: 50px;
-background-color: purple;
+background-color: #0B132D;
 } 
 
 nav div {
@@ -47,7 +47,8 @@ h1 {
 width: 100%;
 font-family: 'Uncial Antiqua', cursive;
 font-size: 52px;
-background-color: indigo;
+background-color: #0B132D;
+color: antiquewhite;
 margin: auto;
 padding: 50px;
 } 
@@ -58,13 +59,13 @@ font-size: 16px;
 font-style: italic;
 margin: auto;
 padding: 40px;
-color: indigo;
+color: #0B132D;
 }
 
 p {
     font-family: 'Uncial Antiqua', cursive;
     font-size: 12px;
-    color: indigo;
+    color: #0B132D;
 }
 
 .deck {
@@ -85,7 +86,7 @@ p {
     transition:  transform .2s;
 }    
 
-section {
+/* section {
     height: 300px;
     width: 700px;
     margin: 60px auto;
@@ -105,9 +106,9 @@ section {
         transition: all 0.9s ease;
         transform: translate(-50%, -50%);
         transform: scale(1);
-    }
+    } */
 
-    .card:active {
+    /* .card:active {
         transform: scale(.98);
         transition:  transform .2s;
     }   
@@ -119,8 +120,8 @@ section {
     .front { 
         width: 100%;
         height: 100%;
-        background-image: url("https://i.imgur.com/9LBwWfF.png");
-        background-position: center;
+        /* background-image: url("https://i.imgur.com/9LBwWfF.png"); */
+        /* background-position: center;
         background-size: cover;
         border: 5px solid white;
         border-radius: 10px;
@@ -131,11 +132,10 @@ section {
         width: 100%;
         height: 100%;
         position: absolute;
-        background-color: black;
         border-radius: 10px; 
         transform: rotateY(-180deg);
         backface-visibility: hidden;
-    } 
+    }  */
 
 button {
     display: hidden;
@@ -143,8 +143,8 @@ button {
     height: 50px;
     margin: auto;
     align-items: center;
-    background-color: indigo;
-    color: lavender;
+    background-color: #0B132D;
+    color: antiquewhite;
     border: 1 px solid transparent;
     border-radius: 5px;
 }
