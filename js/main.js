@@ -52,7 +52,7 @@ const cards = [
 // }); 
 
 
-
+//shuffles the cards
 function shuffle(cards) {
     let newPosition,
         temp;
@@ -66,39 +66,45 @@ for(var i = cards.length - 1; i > 0; i--) {
 return cards;
 };
 
+//selects 3 random cards from array and deals them facedown
+function getRandom() {
+    return Math.floor(Math.random() * cards.length);    
+  }
+
+const getReading = document.querySelector('.deck');
+
+getReading.addEventListener('click', shuffle(cards));
+console.log(cards);
 
 
-// function getRandom() {
-//     return Math.floor(Math.random() * cards.length);    
-//   }
+//   document.getElementsByClassName("deck").onClick = function(shuffle,cards) {
+//     console.log(shuffle(cards));
 
- 
+    //   let dealtCards = getRandom(cards.length) * 3;
+    //   let index = this.getAttribute('data-id');
+    //   let chosenCard = cards(cards.cardImage);
 
-//   document.getElementsByClassName("deck").onClick = function() {
-//       var index = getRandom(cards.length);
-//       var chosenCard = cards[cards.cardImage];
-
-//       document.getElementsByClassName("card").innerHTML = '<img src="images/front/' + chosenCard.image + '.jpg"><p>' + chosenCard.name + '</p>';
+    //  document.getElementsByClassName("card").innerHTML = url('img src="images/back/');
 //   };
+
+
+
 
   //flipcard function ideas-----------------------
 
 
+// const flipCard = function() {
+//         this.getAttribute('data-id');
+//         this.setAttribute('src', cards.cardImage);
+//         chosenCard.push(cards.cardImage);
+//         console.log("User flipped " + cards.cardImage);
+//         };
 
-//const flipCard = function() {
-    //     this.getAttribute('data-id');
-    //     this.setAttribute('src', cards.cardImage);
-    //     chosenCard.push(cards.cardImage);
-    //     console.log("User flipped " + cards.cardImage);
-    //     };
+    
 
-    //   function flipCard() {
-    // $('.card').toggleClass("flip");  
-    // }
-
-// console.log("User flipped " + cards[index].cardName);
-// console.log(cards[index].cardImage);
-// pickedCards.push(cards[index].cardName);
+// console.log("User flipped " + cards.cardName);
+// console.log(cards.cardImage);
+// chosenCard.push(cards.cardName);
 
 
 
