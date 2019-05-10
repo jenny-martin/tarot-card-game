@@ -100,23 +100,11 @@ section {
         transform: rotateY(-180deg);
     }
 
-    /* .front { 
-        position: absolute;
-        height: 300px;
-        width: 222px;
-        background-image: url("https://i.imgur.com/9LBwWfF.png");
-        background-position: center;
-        background-size: cover;  
-        backface-visibility: hidden; 
-    } 
-
-    .back {
-        position: absolute;
-        height: 300px;
-        width: 222px;
-        transform: rotateY(-180deg);
-        backface-visibility: hidden; 
-    }  */
+img {
+     height: 300px;
+     width: 222px;   
+     background-position: center;    
+    }
 
 button {
     display: hidden;

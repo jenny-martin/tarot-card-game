@@ -8,7 +8,6 @@ futureCard.addEventListener('click', flipCard3);
 
 
 
-
 var cards = [
     {
         cardName: 'The Fool',
@@ -29,17 +28,6 @@ var cards = [
 ];
 
 const newArray = [];
-
-
-//this works fine and hides the cards and button to deal again
-// $('section').hide();
-// // $('button').hide();
-
-
-// // //didn't work to display the section
-// $('#deck').on('click', event => {
-//     $('section').show();
-// }); 
 
 
 
@@ -70,33 +58,36 @@ function shuffle(cards) {
 console.log(shuffle(cards));
 
 function flipCard1() {
+    
     document.getElementById("past").innerHTML = '<img src="' + pastCard.cardImage + '">';
-    pastCard.style.height = "300px";
-    pastCard.style.width = "222px";
-    pastCard.style.backgroundPosition = "center";
-    pastCard.style.backgroundSize = "cover";
+    
+   
 
     console.log("user flipped " + pastCard.cardName + " " + pastCard.cardImage);
 };
 
 
 function flipCard2() {
-
+    
     document.getElementById("present").innerHTML = '<img src="' + presentCard.cardImage + '">';
-    presentCard.style.height = "300px";
-    presentCard.style.width = "222px";
-    presenttCard.style.backgroundPosition = "center";
-    presenttCard.style.backgroundSize = "cover";
+    
+   
 
     console.log("User flipped " + presentCard.cardName + " " + presentCard.cardImage);
 };
 
 function flipCard3() {
-
+    
     document.getElementById("future").innerHTML = '<img src="' + futureCard.cardImage + '">';
-    futureCard.style.height = "300px";
-    futureCard.style.width = "222px";
-    futureCard.style.backgroundPosition = "center";
-    futureCard.style.backgroundSize = "cover";
+    
+   
+  
     console.log("User flipped " + futureCard.cardName + " " + futureCard.cardImage);
 };
+
+
+
+function getAnotherReading() {
+    window.location.reload(true);   
+    };
+
