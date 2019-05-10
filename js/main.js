@@ -24,10 +24,50 @@ var cards = [
     {
         cardName: 'The Emperor',
         cardImage: "images/front/theemporer.jpg",
-    }
+    },
+    {
+        cardName: 'Death',
+        cardImage: "images/front/death.jpg",
+},
+{
+        cardName: 'The Hanged Man',
+        cardImage: "images/front/hangedman.jpg",
+},
+    {
+        cardName: 'The Hermit',
+        cardImage: "images/front/hermit.jpg",
+    },
+    {
+        cardName: 'The High Priestess',
+        cardImage: "images/front/highpriestess.jpg",
+    },
+    {
+        cardName: 'Justice',
+        cardImage: "images/front/justice.jpg",
+    },
+    {
+        cardName: 'Strength',
+        cardImage: "images/front/strength.jpg",
+    },
+        
+    { 
+        cardName: 'The Wheel of Fortune',
+        cardImage: "images/front/wheeloffortune.jpg",
+    },
 ];
 
 const newArray = [];
+
+
+//this works fine and hides the cards and button to deal again
+// $('section').hide();
+// // $('button').hide();
+
+
+// // //didn't work to display the section
+// $('#deck').on('click', event => {
+//     $('section').show();
+// }); 
 
 
 
@@ -60,9 +100,7 @@ console.log(shuffle(cards));
 function flipCard1() {
     
     document.getElementById("past").innerHTML = '<img src="' + pastCard.cardImage + '">';
-    
-   
-
+    pastCard.visibility = "visible";
     console.log("user flipped " + pastCard.cardName + " " + pastCard.cardImage);
 };
 
@@ -70,18 +108,14 @@ function flipCard1() {
 function flipCard2() {
     
     document.getElementById("present").innerHTML = '<img src="' + presentCard.cardImage + '">';
-    
-   
-
+    presentCard.visibility = "visible";
     console.log("User flipped " + presentCard.cardName + " " + presentCard.cardImage);
 };
 
 function flipCard3() {
     
     document.getElementById("future").innerHTML = '<img src="' + futureCard.cardImage + '">';
-    
-   
-  
+    futureCard.visibility = "visible";
     console.log("User flipped " + futureCard.cardName + " " + futureCard.cardImage);
 };
 
