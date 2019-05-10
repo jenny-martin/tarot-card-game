@@ -2,6 +2,14 @@
 
 ###Introduction: This tarot card generator will allow the user to receive a fun, quick, easy-to-use digital tarot reading.
 
+#Getting Started
+ * link to game 
+https://jennynm1010.github.io/tarot-card-game/
+
+* [wireframe-link](https://wireframe.cc/pro/edit/245136) 
+
+
+
 ##How to Play: 
 * The user will see a deck of cards on the main page and will click on the deck of cards to deal out three randomly chosen cards from the deck. 
 
@@ -12,12 +20,12 @@
 //card
 
 ```
-var tarotCards = [1, 2, 3, 4, ...78]
+var cards = [array of objects];
 ;
 ```
 
 ```
-function randomCardPicker() {
+function shuffle(cards) {
     return Math.floor(Math.random()*78);
 }
 ```
@@ -42,19 +50,21 @@ function randomCardPicker() {
 
 * The user will also have the choice to learn more about the cards chosen in their reading, the history of the tarot, more info about the creator and artwork in a separate page through clickable links.
 
+#Technologies Used: 
+* HTML
+* CSS
+* JavaScript
+
+
 ####Stretch Goals
 
+* add fun animations to create better user experience
+* add additional pages accessible through nav bar with links for more information
 * to include fun sounds (background music) or animations (shuffling the deck)
 * to include all 78 cards in the deck
 * to offer the user the choice of multiple tarot spreads to choose from (ie - 1 Card/ 3 card/ Love Spread/ Career Spread/ Tree Of Life, etc.)
 
 ####Stretch Goals Future
 
-* to eventually be able to loop through an API with all 78 cards in the deck
 * to possibly offer the option of choosing from different decks/ artwork
 * to offer the user the ability to login to their account, and save their readings to review again at a later date.
-
-[wireframe-link](https://wireframe.cc/pro/edit/245136) 
-
-link to game 
-file:///Users/jennymartin/Fundamentals/code/tarot-card-game/index.html

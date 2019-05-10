@@ -28,11 +28,11 @@ var cards = [
     {
         cardName: 'Death',
         cardImage: "images/front/death.jpg",
-},
-{
+    },
+    {
         cardName: 'The Hanged Man',
         cardImage: "images/front/hangedman.jpg",
-},
+    },
     {
         cardName: 'The Hermit',
         cardImage: "images/front/hermit.jpg",
@@ -49,8 +49,8 @@ var cards = [
         cardName: 'Strength',
         cardImage: "images/front/strength.jpg",
     },
-        
-    { 
+
+    {
         cardName: 'The Wheel of Fortune',
         cardImage: "images/front/wheeloffortune.jpg",
     },
@@ -95,7 +95,7 @@ function shuffle(cards) {
 console.log(shuffle(cards));
 
 function flipCard1() {
-    
+
     document.getElementById("past").innerHTML = '<img src="' + pastCard.cardImage + '">';
     pastCard.visibility = "visible";
     console.log("user flipped " + pastCard.cardName + " " + pastCard.cardImage);
@@ -103,14 +103,14 @@ function flipCard1() {
 
 
 function flipCard2() {
-    
+
     document.getElementById("present").innerHTML = '<img src="' + presentCard.cardImage + '">';
     presentCard.visibility = "visible";
     console.log("User flipped " + presentCard.cardName + " " + presentCard.cardImage);
 };
 
 function flipCard3() {
-    
+
     document.getElementById("future").innerHTML = '<img src="' + futureCard.cardImage + '">';
     futureCard.visibility = "visible";
     console.log("User flipped " + futureCard.cardName + " " + futureCard.cardImage);
@@ -119,6 +119,6 @@ function flipCard3() {
 
 
 function getAnotherReading() {
-    window.location.reload(true);   
-    };
+    window.location.reload(true);
+};
 
