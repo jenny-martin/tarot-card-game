@@ -59,17 +59,6 @@ var cards = [
 const newArray = [];
 
 
-//this works fine and hides the cards and button to deal again
-// $('section').hide();
-// // $('button').hide();
-
-
-// // //didn't work to display the section
-// $('#deck').on('click', event => {
-//     $('section').show();
-// }); 
-
-
 
 function newArrayCards() {
     pastCard = newArray[0];
@@ -89,6 +78,14 @@ function shuffle(cards) {
         newArray.push(cards[0]);
         newArray.push(cards[1]);
         newArray.push(cards[2]);
+        newArray.push(cards[3]);
+        newArray.push(cards[4]);
+        newArray.push(cards[5]);
+        newArray.push(cards[6]);
+        newArray.push(cards[7]);
+        newArray.push(cards[8]);
+        newArray.push(cards[9]);
+        newArray.push(cards[10]);
         newArrayCards();
 
     }
