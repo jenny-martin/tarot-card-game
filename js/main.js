@@ -1,144 +1,102 @@
-/*----- constants -----*/ 
+
+var pastCard = document.getElementById('past');
+var presentCard = document.getElementById('present');
+var futureCard = document.getElementById('future');
+pastCard.addEventListener('click', flipCard1);
+presentCard.addEventListener('click', flipCard2);
+futureCard.addEventListener('click', flipCard3);
 
 
 
-const cards = [
+
+var cards = [
     {
-    cardName: 'The Fool',
-    cardImage: "images/front/thefool.jpg",
-},
-{
-    cardName: 'The Magician',
-    cardImage: "images/front/themagician.jpg",
-},
-{
-    cardName: 'The Empress',
-    cardImage: "images/front/theempress.jpg",
-},
-{
-    cardName: 'The Emperor',
-    cardImage: "images/front/theemporer.jpg",
-}
+        cardName: 'The Fool',
+        cardImage: "images/front/thefool.jpg",
+    },
+    {
+        cardName: 'The Magician',
+        cardImage: "images/front/themagician.jpg",
+    },
+    {
+        cardName: 'The Empress',
+        cardImage: "images/front/theempress.jpg",
+    },
+    {
+        cardName: 'The Emperor',
+        cardImage: "images/front/theemporer.jpg",
+    }
 ];
 
+const newArray = [];
 
-
-
-
-
-/*----- app's state (variables) -----*/ 
-
-
-
-/*----- cached element references -----*/ 
-
-
-
-/*----- event listeners -----*/ 
-
-
-
-
-/*----- functions -----*/
 
 //this works fine and hides the cards and button to deal again
 // $('section').hide();
-// $('button').hide();
+// // $('button').hide();
 
 
-// //didn't work to display the section
+// // //didn't work to display the section
 // $('#deck').on('click', event => {
 //     $('section').show();
 // }); 
 
 
-//shuffles the cards
+
+function newArrayCards() {
+    pastCard = newArray[0];
+    presentCard = newArray[1];
+    futureCard = newArray[2];
+}
+
 function shuffle(cards) {
     let newPosition,
         temp;
 
-for(var i = cards.length - 1; i > 0; i--) {
-    newPosition = Math.floor(Math.random() * (i + 1));
-    temp = cards[i];
-    cards[i] = cards[newPosition];
-    cards[newPosition] = temp;
-} 
-return cards;
+    for (var i = cards.length - 1; i > 0; i--) {
+        newPosition = Math.floor(Math.random() * (i + 1));
+        temp = cards[i];
+        cards[i] = cards[newPosition];
+        cards[newPosition] = temp;
+        newArray.push(cards[0]);
+        newArray.push(cards[1]);
+        newArray.push(cards[2]);
+        newArrayCards();
+
+    }
+    return cards;
+}
+
+console.log(shuffle(cards));
+
+function flipCard1() {
+    document.getElementById("past").innerHTML = '<img src="' + pastCard.cardImage + '">';
+    pastCard.style.height = "300px";
+    pastCard.style.width = "222px";
+    pastCard.style.backgroundPosition = "center";
+    pastCard.style.backgroundSize = "cover";
+
+    console.log("user flipped " + pastCard.cardName + " " + pastCard.cardImage);
 };
 
-//selects 3 random cards from array and deals them facedown
-function getRandom() {
-    return Math.floor(Math.random() * cards.length);    
-  }
 
-const getReading = document.querySelector('.deck');
+function flipCard2() {
 
-getReading.addEventListener('click', shuffle(cards));
-console.log(cards);
+    document.getElementById("present").innerHTML = '<img src="' + presentCard.cardImage + '">';
+    presentCard.style.height = "300px";
+    presentCard.style.width = "222px";
+    presenttCard.style.backgroundPosition = "center";
+    presenttCard.style.backgroundSize = "cover";
 
+    console.log("User flipped " + presentCard.cardName + " " + presentCard.cardImage);
+};
 
-//   document.getElementsByClassName("deck").onClick = function(shuffle,cards) {
-//     console.log(shuffle(cards));
+function flipCard3() {
 
-    //   let dealtCards = getRandom(cards.length) * 3;
-    //   let index = this.getAttribute('data-id');
-    //   let chosenCard = cards(cards.cardImage);
-
-    //  document.getElementsByClassName("card").innerHTML = url('img src="images/back/');
-//   };
-
-
-
-
-  //flipcard function ideas-----------------------
-
-
-// const flipCard = function() {
-//         this.getAttribute('data-id');
-//         this.setAttribute('src', cards.cardImage);
-//         chosenCard.push(cards.cardImage);
-//         console.log("User flipped " + cards.cardImage);
-//         };
-
-    
-
-// console.log("User flipped " + cards.cardName);
-// console.log(cards.cardImage);
-// chosenCard.push(cards.cardName);
-
-
-
-//this removes the card from the deck once it's been selected --------
-//   $('.deck').click(function() {
-//     picked.length = 0;
-//     $(this).remove();
-//     $('.card.flip').fadeIn();
-//     flipCard();
-//   });
-
-
-//removes card from deck once used
-//   var removeCard = function(k) {
-// 	for (var j=k; j<cards.length; j++) {
-// 		cards[j] = cards[j+1];	
-// 	}
-// 	cardsLeftToDeal--;
-// 	cardsDealt++;
-// };
-
-
-
-//creates the game board --------------------------------------
-// const createBoard = function() {
-//     let theBoard = document.getElementById("the-board");
-//     for (var i = 0; i < cards.length; i++) {
-//         var cardElement = document.createElement('img');
-//         cardElement.setAttribute('src', "images/back.png");
-//         cardElement.setAttribute('data-id', i);
-//         cardElement.addEventListener('click', flipCard);
-//         theBoard.appendChild(cardElement);
-//     }
-// }
-
-
-//createBoard();
+    document.getElementById("future").innerHTML = '<img src="' + futureCard.cardImage + '">';
+    futureCard.style.height = "300px";
+    futureCard.style.width = "222px";
+    futureCard.style.backgroundPosition = "center";
+    futureCard.style.backgroundSize = "cover";
+    console.log("User flipped " + futureCard.cardName + " " + futureCard.cardImage);
+};

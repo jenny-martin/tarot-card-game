@@ -9,37 +9,12 @@
 
 }
 
-/* header not working still */
-/* header {
-    display: flex;
-    background-image: url("https://i.imgur.com/ORL23sJ.jpg") no-repeat;
-    margin: 0;
-    padding: 30px 20px 30px 20px;
-}  */
 
 body {
 height: 100vh;    
-/* display: flex; */
 background-color: antiquewhite;
 color: #0B132D;
 text-align: center;
-}
-
-
-nav {
-display: none;   
-flex-direction: row; 
-justify-content: space-around;
-align-items: center;
-height: 50px;
-background-color: #0B132D;
-} 
-
-nav div {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    margin: 10px;
-    color: white;
 }
 
 
@@ -84,9 +59,9 @@ p {
 .deck:active {
     transform: scale(.98);
     transition:  transform .2s;
-}    
+}     
 
-/* section {
+section {
     height: 300px;
     width: 700px;
     margin: 60px auto;
@@ -96,45 +71,51 @@ p {
 
 
     .card {
-        width: 222px;
-        height: 300px;
-        margin: auto;
-        position: relative;
-        border: 1px solid transparent;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 300px; 
+        width: 222px; 
+        background-image: url("https://i.imgur.com/9LBwWfF.png");
+        background-position: center;
+        background-size: cover;  
+        border: 5px solid white;
         border-radius: 10px;
+        padding: 10px;
+        margin: 20px auto;
+        position: relative;
         transform-style: preserve-3d;
         transition: all 0.9s ease;
         transform: translate(-50%, -50%);
         transform: scale(1);
-    } */
+    } 
 
-    /* .card:active {
+    .card:active {
         transform: scale(.98);
         transition:  transform .2s;
     }   
 
-     .card.flip {
+    .card.flip {
         transform: rotateY(-180deg);
     }
 
-    .front { 
-        width: 100%;
-        height: 100%;
-        /* background-image: url("https://i.imgur.com/9LBwWfF.png"); */
-        /* background-position: center;
-        background-size: cover;
-        border: 5px solid white;
-        border-radius: 10px;
-        backface-visibility: hidden;
+    /* .front { 
+        position: absolute;
+        height: 300px;
+        width: 222px;
+        background-image: url("https://i.imgur.com/9LBwWfF.png");
+        background-position: center;
+        background-size: cover;  
+        backface-visibility: hidden; 
     } 
 
-     .back {
-        width: 100%;
-        height: 100%;
+    .back {
         position: absolute;
-        border-radius: 10px; 
+        height: 300px;
+        width: 222px;
         transform: rotateY(-180deg);
-        backface-visibility: hidden;
+        backface-visibility: hidden; 
     }  */
 
 button {
