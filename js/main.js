@@ -14,6 +14,10 @@ var cards = [
         cardImage: "images/front/thefool.jpg",
     },
     {
+        cardName: 'Strength',
+        cardImage: "images/front/strength.jpg",
+    },
+    {
         cardName: 'The Magician',
         cardImage: "images/front/themagician.jpg",
     },
@@ -46,13 +50,17 @@ var cards = [
         cardImage: "images/front/justice.jpg",
     },
     {
-        cardName: 'Strength',
-        cardImage: "images/front/strength.jpg",
-    },
-    {
         cardName: 'The Wheel of Fortune',
         cardImage: "images/front/wheeloffortune.jpg",
     },
+    {
+        cardName: 'The Chariot',
+        cardImage: "images/front/thechariot.jpg",
+    },
+    {
+        cardName: 'The Heirophant',
+        cardImage: "images/front/thehierophant.jpg",
+    }
 ];
 
 const newArray = [];
@@ -85,6 +93,8 @@ function shuffle(cards) {
         newArray.push(cards[8]);
         newArray.push(cards[9]);
         newArray.push(cards[10]);
+        newArray.push(cards[11]);
+        newArray.push(cards[12]);
         newArrayCards();
 
     }
