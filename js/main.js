@@ -18,16 +18,16 @@ var cards = [
         cardImage: "images/front/themagician.jpg",
     },
     {
+        cardName: 'Death',
+        cardImage: "images/front/death.jpg",
+    },
+    {
         cardName: 'The Empress',
         cardImage: "images/front/theempress.jpg",
     },
     {
         cardName: 'The Emperor',
         cardImage: "images/front/theemporer.jpg",
-    },
-    {
-        cardName: 'Death',
-        cardImage: "images/front/death.jpg",
     },
     {
         cardName: 'The Hanged Man',
@@ -49,7 +49,6 @@ var cards = [
         cardName: 'Strength',
         cardImage: "images/front/strength.jpg",
     },
-
     {
         cardName: 'The Wheel of Fortune',
         cardImage: "images/front/wheeloffortune.jpg",

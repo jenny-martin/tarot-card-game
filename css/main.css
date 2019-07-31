@@ -11,7 +11,6 @@
 
 
 body {
-height: 100vh;    
 background-color: antiquewhite;
 color: #0B132D;
 text-align: center;
@@ -21,22 +20,22 @@ text-align: center;
 h1 {
 width: 100%;
 font-family: 'Uncial Antiqua', cursive;
-font-size: 52px;
 background-color: #0B132D;
 color: antiquewhite;
-margin: auto;
+margin: 0 auto;
 padding: 50px;
 } 
 
 h3 {
-font-family: Arial, Helvetica, sans-serif;
-font-size: 16px;
+font-family: 'Italianno', cursive;
 font-style: italic;
 margin: auto;
 padding: 40px;
 color: #0B132D;
 }
 
+
+                
 p {
     font-family: 'Uncial Antiqua', cursive;
     font-size: 12px;
@@ -46,7 +45,7 @@ p {
 .deck {
     align-items: center;
     justify-content: center;
-    width: 222px;
+    width: 192px;
     height: 300px;
     margin: 20px auto; 
     background-image: url("https://i.imgur.com/9LBwWfF.png");
@@ -76,13 +75,12 @@ section {
         align-items: center;
         justify-content: space-between;
         height: 300px; 
-        width: 222px; 
+        width: 192px; 
         background-image: url("https://i.imgur.com/9LBwWfF.png");
         background-position: center;
         background-size: cover;  
         border: 5px solid white;
         border-radius: 10px;
-        padding: 10px;
         margin: 20px auto;
         position: relative;
         transform-style: preserve-3d;
@@ -102,7 +100,7 @@ section {
 
 img {
      height: 300px;
-     width: 222px;   
+     width: 192px;   
      background-position: center;    
     }
 
