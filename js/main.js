@@ -60,12 +60,42 @@ var cards = [
     {
         cardName: 'The Heirophant',
         cardImage: "images/front/thehierophant.jpg",
+    },
+    {
+        cardName: 'The Moon',
+        cardImage: "images/front/moon.jpg",
+    },
+    {
+        cardName: 'The Sun',
+        cardImage: "images/front/sun.jpg",
+    },
+    {
+        cardName: 'Judgement',
+        cardImage: "images/front/judgement.jpg",
+    },
+    {
+        cardName: 'The World',
+        cardImage: "images/front/world.jpg",
+    },
+    {
+        cardName: 'The Devil',
+        cardImage: "images/front/devil.jpg",
+    },
+    {
+        cardName: 'The Tower',
+        cardImage: "images/front/tower.jpg",
+    },
+    {
+        cardName: 'The Star',
+        cardImage: "images/front/star.jpg",
+    },
+    {
+        cardName: 'Temperance',
+        cardImage: "images/front/temperance.jpg",
     }
 ];
 
 const newArray = [];
-
-
 
 function newArrayCards() {
     pastCard = newArray[0];
@@ -95,6 +125,14 @@ function shuffle(cards) {
         newArray.push(cards[10]);
         newArray.push(cards[11]);
         newArray.push(cards[12]);
+        newArray.push(cards[13]);
+        newArray.push(cards[14]);
+        newArray.push(cards[15]);
+        newArray.push(cards[16]);
+        newArray.push(cards[17]);
+        newArray.push(cards[18]);
+        newArray.push(cards[19]);
+        newArray.push(cards[20]);
         newArrayCards();
 
     }

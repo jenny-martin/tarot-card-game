@@ -6,10 +6,10 @@
  * link to game 
 https://jennynm1010.github.io/tarot-card-game/
 
-* [wireframe-link](https://wireframe.cc/pro/edit/245136) 
+* [wireframe-link]!(https://wireframe.cc/pro/edit/245136) 
 
-![]screenshots/initial-page.png
-![]screenshots/after-clicks.png
+!(screenshots/initial-page.png)
+!(screenshots/after-clicks.png)
 
 
 ##How to Play: 

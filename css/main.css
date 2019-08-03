@@ -1,79 +1,55 @@
-*, *::after, *::before {
-    box-sizing: border-box;
-}
-
-@media only screen and (min-width: 1440px){
-
-}
-@media only screen and (max-width: 320px) {
-
-}
 
 
 body {
-background-color: antiquewhite;
-color: #0B132D;
-text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    background-color: antiquewhite;
+    color: #0B132D;
+    margin: auto;
 }
 
 
 h1 {
-width: 100%;
-font-family: 'Uncial Antiqua', cursive;
-background-color: #0B132D;
-color: antiquewhite;
-margin: 0 auto;
-padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-family: 'Uncial Antiqua', cursive;
+    background-color: #0B132D;
+    color: antiquewhite;
+    margin: auto;
+    height: 30vh;
 } 
 
 h3 {
-font-family: 'Italianno', cursive;
-font-style: italic;
-margin: auto;
-padding: 40px;
-color: #0B132D;
-}
-
-
-                
-p {
-    font-family: 'Uncial Antiqua', cursive;
-    font-size: 12px;
-    color: #0B132D;
-}
-
-.deck {
-    align-items: center;
     justify-content: center;
-    width: 192px;
-    height: 300px;
-    margin: 20px auto; 
-    background-image: url("https://i.imgur.com/9LBwWfF.png");
-    background-position: center;
-    background-size: cover;
-    border: 5px solid white;
-    border-radius: 10px;
-    } 
-
-.deck:active {
-    transform: scale(.98);
-    transition:  transform .2s;
-}     
+    font-family: 'Italianno', cursive;
+    font-style: italic;
+    margin: auto;
+    padding: 50px;
+    color: #0B132D;
+    text-align: center;
+}
+     
 
 section {
-    height: 300px;
-    width: 700px;
-    margin: 60px auto;
-    display: flex;
-    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 20px auto;
+    margin-bottom: 20px auto;
     }
 
 
+   p {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 32px;
+    color: antiquewhite;
+    text-align: center;
+    margin-top: 110px;
+}
+
     .card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
         height: 300px; 
         width: 192px; 
         background-image: url("https://i.imgur.com/9LBwWfF.png");
@@ -81,13 +57,17 @@ section {
         background-size: cover;  
         border: 5px solid white;
         border-radius: 10px;
-        margin: 20px auto;
-        position: relative;
         transform-style: preserve-3d;
         transition: all 0.9s ease;
         transform: translate(-50%, -50%);
         transform: scale(1);
+        margin-right: 20px;
+        margin-bottom: 20px;
     } 
+
+    .card:last-child {
+        margin-right: 0;
+    }    
 
     .card:active {
         transform: scale(.98);
@@ -101,7 +81,8 @@ section {
 img {
      height: 300px;
      width: 192px;   
-     background-position: center;    
+     background-position: center; 
+     background-size: cover;  
     }
 
 button {
@@ -116,11 +97,28 @@ button {
     border-radius: 5px;
 }
 
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    content: " ";
-    clear: both;
-    height: 0;
-    font-size: 0;
-  }
+/* Large screens */
+@media (min-width: 768px) {
+    section{
+        display: flex;
+    }
+
+    .deck {
+        display: flex;
+        width: 192px;
+        height: 300px;
+        margin: auto; 
+        margin-bottom: 20px; 
+        background-image: url("https://i.imgur.com/9LBwWfF.png");
+        background-position: center;
+        background-size: cover;
+        border: 5px solid white;
+        border-radius: 10px;
+        } 
+    
+    .deck:active {
+        transform: scale(.98);
+        transition:  transform .2s;
+    }
+}
+
