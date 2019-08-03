@@ -1,14 +1,13 @@
 
+
 var pastCard = document.getElementById('past');
 var presentCard = document.getElementById('present');
 var futureCard = document.getElementById('future');
-pastCard.addEventListener('click', flipCard1);
-presentCard.addEventListener('click', flipCard2);
-futureCard.addEventListener('click', flipCard3);
+pastCard.addEventListener("click", flipCard1);
+presentCard.addEventListener("click", flipCard2);
+futureCard.addEventListener("click", flipCard3);
 
-
-
-var cards = [
+var cardsArray = [
     {
         cardName: 'The Fool',
         cardImage: "images/front/thefool.jpg",
@@ -79,7 +78,7 @@ var cards = [
     },
     {
         cardName: 'The Devil',
-        cardImage: "images/front/devil.jpg",
+        cardImage: "images/front/thedevil.jpg",
     },
     {
         cardName: 'The Tower',
@@ -96,58 +95,38 @@ var cards = [
 ];
 
 const newArray = [];
+cardsArray = shuffle(cardsArray);
 
 function newArrayCards() {
-    pastCard = newArray[0];
-    presentCard = newArray[1];
-    futureCard = newArray[2];
+    pastCard = cardsArray[0];
+    presentCard = cardsArray[1];
+    futureCard = cardsArray[2];
 }
 
-function shuffle(cards) {
-    let newPosition,
-        temp;
+function shuffle(cardsArray) {
+var currentPass = cardsArray.length;
+var index, temp;
 
-    for (var i = cards.length - 1; i > 0; i--) {
-        newPosition = Math.floor(Math.random() * (i + 1));
-        temp = cards[i];
-        cards[i] = cards[newPosition];
-        cards[newPosition] = temp;
-        newArray.push(cards[0]);
-        newArray.push(cards[1]);
-        newArray.push(cards[2]);
-        newArray.push(cards[3]);
-        newArray.push(cards[4]);
-        newArray.push(cards[5]);
-        newArray.push(cards[6]);
-        newArray.push(cards[7]);
-        newArray.push(cards[8]);
-        newArray.push(cards[9]);
-        newArray.push(cards[10]);
-        newArray.push(cards[11]);
-        newArray.push(cards[12]);
-        newArray.push(cards[13]);
-        newArray.push(cards[14]);
-        newArray.push(cards[15]);
-        newArray.push(cards[16]);
-        newArray.push(cards[17]);
-        newArray.push(cards[18]);
-        newArray.push(cards[19]);
-        newArray.push(cards[20]);
-        newArrayCards();
+while (currentPass > 0) {
+    index = Math.floor(Math.random() * currentPass);
+    currentPass --;
 
-    }
-    return cards;
+    temp = cardsArray[currentPass];
+    cardsArray[currentPass] = cardsArray[index];
+    cardsArray[index] = temp;
+    newArrayCards();
+}
+   return cardsArray;  
 }
 
-console.log(shuffle(cards));
-
+console.log(shuffle(cardsArray));
+ 
 function flipCard1() {
 
     document.getElementById("past").innerHTML = '<img src="' + pastCard.cardImage + '">';
     pastCard.visibility = "visible";
     console.log("user flipped " + pastCard.cardName + " " + pastCard.cardImage);
 };
-
 
 function flipCard2() {
 
@@ -162,8 +141,6 @@ function flipCard3() {
     futureCard.visibility = "visible";
     console.log("User flipped " + futureCard.cardName + " " + futureCard.cardImage);
 };
-
-
 
 function getAnotherReading() {
     window.location.reload(true);
