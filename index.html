@@ -13,19 +13,23 @@
 <body>
     <h1>TAROT CARD READING</h1>
  
-    <h3>Click on the deck below to begin your reading.</h3>
+    <h3>With your question top of mind, thoughtfully set your intentions. <br>Click on the deck of cards below to shuffle them. <br>Flip each card over to reveal your reading.</h3>
    
+   <section>
+    <div class="deck"></div>
+    <div class="deck"></div>
+    <div class="deck"></div>
+    <div class="deck"></div>
     <div class="deck" onclick="getAnotherReading()"></div>
+</section>
 
-
-    <section>
-    
+    <main>
         <div class="card" id="past"><p>PAST</p><img src="" style="visibility:hidden" alt="tarot card image"></div>
         
         <div class="card" id="present"><p>PRESENT</p><img src="" style="visibility:hidden" alt="tarot card image"></div>
         
         <div class="card" id="future"><p>FUTURE</p><img src="" style="visibility:hidden" alt="tarot card image"></div>
-    </section>
+    </main>
 
     <button onclick="getAnotherReading()">Get Another Reading</button>
 
