@@ -3,7 +3,7 @@
 ### Introduction: This tarot card generator will allow the user to receive a fun, quick, easy-to-use digital tarot reading.
 
 # Getting Started
- * link to game - https://jennynm1010.github.io/tarot-card-game/
+ * link to game - https://jenny-martin.github.io/tarot-card-game/
 
 * wireframe-link - https://wireframe.cc/pro/edit/245136
 
